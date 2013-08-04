@@ -3,7 +3,7 @@
 pkgname=tzupdate-git
 _gitname=tzupdate
 pkgver=20130804170828.85cbbca
-pkgrel=1
+pkgrel=2
 pkgdesc="Set the local timezone based on IP geolocation."
 license=( MIT )
 url=https://github.com/cdown/tzupdate
@@ -23,5 +23,5 @@ pkgver() {
 
 package() {
     cd "$_gitname"
-    python2 setup.py install --root="$pkgdir"
+    python setup.py install --root="$pkgdir"
 }
